@@ -58,7 +58,6 @@ class Process(subprocess.Popen):
                 os.kill(self.pid, sig)
             else:
                 # Kill the whole process group
-                print(proc_pgid)
                 os.killpg(proc_pgid, sig)
 
 class ProcessManager(object):
